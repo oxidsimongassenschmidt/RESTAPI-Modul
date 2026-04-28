@@ -16,7 +16,7 @@ readonly class ProductApiController
     ) {
     }
 
-    #[Route('api/products/', methods: ['GET'])]
+    #[Route('api/products', methods: ['GET'])]
     public function listProducts(): Response
     {
         $products = $this->productService->getActiveProducts();
