@@ -1,2 +1,11 @@
-OxidSupport\RestApi\Controller\Api\ProductApiController:
-  public: true
+services:
+  _defaults:
+    public: false
+    autowire: true
+
+  OxidSupport\RestApi\Controller\Api\ProductApiController:
+    public: true
+
+  OxidSupport\RestApi\Service\ProductServiceInterface:
+    class: OxidSupport\RestApi\Service\ProductService
+    public: true
