@@ -20,6 +20,5 @@ class ProductService implements ProductServiceInterface {
 
         $ArticleList->selectString($sSelect);
         return $ArticleList->getArray();
-        throw new \Exception('Not implemented');
     }
 }
