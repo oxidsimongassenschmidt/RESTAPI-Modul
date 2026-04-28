@@ -1,5 +1,11 @@
 # RESTAPI-Modul
 
+##
+
+Needs OXID eShop 7.5
+
+## Installation
+
 ```bash
  composer config repositories.oxid-support/oxsrestapi path RESTAPI-Modul  
 ```
