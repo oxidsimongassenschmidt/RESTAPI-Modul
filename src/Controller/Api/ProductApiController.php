@@ -8,6 +8,7 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
 use OxidSupport\RestApi\Service\ProductServiceInterface;
+
 readonly class ProductApiController
 {
     public function __construct(
@@ -15,14 +16,16 @@ readonly class ProductApiController
     ) {
     }
 
-    #[Route('/api/products', methods: ['GET'])]
+    #[Route('api/products/', methods: ['GET'])]
     public function listProducts(): Response
     {
         $products = $this->productService->getActiveProducts();
 
         return new JsonResponse([
-            'products' => $products,
-            'total' => count($products),
+           'test' => "success",
+           'total' => count($products),
+           'prdocuts' => $products,
+           
         ]);
     }
 }
