@@ -1,0 +1,2 @@
+OxidSupport\RestApi\Controller\Api\ProductApiController:
+  public: true
