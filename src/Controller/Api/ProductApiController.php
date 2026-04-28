@@ -24,7 +24,7 @@ readonly class ProductApiController
         return new JsonResponse([
            'test' => "success",
            'total' => count($products),
-           'prdocuts' => $products,
+           'products' => $products,
            
         ]);
     }
