@@ -1,10 +1,10 @@
 parameters:
     oxid_esales.rate_limiter.enabled: true
     oxid_esales.rate_limiter.limit: 1
-    oxid_esales.rate_limiter.interval: 60
+    oxid_esales.rate_limiter.interval: 10
     oxid_esales.rate_limiter.policy: 'token_bucket'
     oxid_esales.rate_limiter.excluded_routes: 
-      - 'api/products'
+      - '/api/products'
     
 
 services:

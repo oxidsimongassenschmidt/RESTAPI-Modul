@@ -16,7 +16,7 @@ readonly class ProductApiController
     ) {
     }
 
-    #[Route('api/products', methods: ['GET'])]
+    #[Route('/api/products', methods: ['GET'])]
     public function listProducts(): Response
     {
         $products = $this->productService->getActiveProducts();
@@ -27,5 +27,23 @@ readonly class ProductApiController
            'products' => $products,
            
         ]);
+    }
+    #[Route('/api/products/', methods: ['GET'])]
+    public function testOne(): Response
+    {
+        return new JsonResponse(
+            [
+                'test' => "success",
+            ]
+        );
+    }
+    #[Route('api/shouldnotwork', methods: ['GET'])]
+    public function testSecond(): Response
+    {
+        return new JsonResponse(
+            [
+                'test' => "success - but actually should not work",
+            ]
+        );
     }
 }
