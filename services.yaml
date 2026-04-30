@@ -5,6 +5,7 @@ parameters:
     oxid_esales.rate_limiter.policy: 'token_bucket'
     oxid_esales.rate_limiter.excluded_routes: 
       - '/api/products'
+      - '/api/rateLimitTestByPass/'
     
 
 services:

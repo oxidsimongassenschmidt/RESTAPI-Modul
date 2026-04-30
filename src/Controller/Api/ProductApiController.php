@@ -65,4 +65,13 @@ readonly class ProductApiController
             ]
         );
     }
+    #[Route('/api/rateLimitTestByPass/', methods: ['GET'])]
+    public function testFive(): Response
+    {
+        return new JsonResponse(
+            [
+                'test' => "success - always",
+            ]
+        );
+    }
 }
