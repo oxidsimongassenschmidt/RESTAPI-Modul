@@ -46,4 +46,14 @@ readonly class ProductApiController
             ]
         );
     }
+
+    #[Route('shouldnotworktoo', methods: ['GET'])]
+    public function testThird(): Response
+    {
+        return new JsonResponse(
+            [
+                'test' => "success - but actually should not work, and does not work, rightly so!",
+            ]
+        );
+    }
 }
