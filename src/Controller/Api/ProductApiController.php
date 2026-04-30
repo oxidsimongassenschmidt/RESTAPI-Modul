@@ -38,7 +38,7 @@ readonly class ProductApiController
         );
     }
     #[Route('api/shouldnotwork', methods: ['GET'])]
-    public function testSecond(): Response
+    public function testTwo(): Response
     {
         return new JsonResponse(
             [
@@ -48,11 +48,20 @@ readonly class ProductApiController
     }
 
     #[Route('shouldnotworktoo', methods: ['GET'])]
-    public function testThird(): Response
+    public function testThree(): Response
     {
         return new JsonResponse(
             [
                 'test' => "success - but actually should not work, and does not work, rightly so!",
+            ]
+        );
+    }
+    #[Route('/api/rateLimitTest', methods: ['GET'])]
+    public function testFour(): Response
+    {
+        return new JsonResponse(
+            [
+                'test' => "success - then RateLimit",
             ]
         );
     }
